@@ -23,9 +23,7 @@
             "polyfills": [
               "zone.js"
             ],
-            "allowedCommonJsDependencies": [
-              "plotly.js-dist-min"
-            ],
+            "allowedCommonJsDependencies": [],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
