@@ -9,37 +9,79 @@
     color: white;
 }
 
-$text: calc(1.375rem + 1.5vw);
-  
-.img-wrapper, .mcgill-title {
+$text: calc(1.75rem + 1.5vw);
+
+
+#home {
+    position: relative;
+}
+
+.img-wrapper, .mcgill-title, .arrow{
     background-color: black;
 }
 
+// PC
 @media (min-width: 992px) {
     .img-wrapper {
         height: calc(75vh - 75px);
+        align-items: center;
+    }
+
+    .main-image {
+        max-width: 100%;
+    }
+
+    .mcgill-title {
+        height: 25vh;
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
     }
 }
 
+// Mobile
 @media (max-width: 991px) {
     .img-wrapper {
-        height: 100%;
+        height: calc(50vh - 75px);
         padding-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .main-image {
+        min-height: 70%;
+        max-width: unset;
+    }
+
+    .mcgill-title {
+        height: 40vh;
+    }
+
+    .arrow {
+        height: 10vh;
+        align-items: center;
     }
 }
 
-.main-image {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-}
+.arrow .btn {
+    height: fit-content;
+    font-size: 2rem;
+    border: none;
+    color:white;
+} 
 
 .mcgill-title {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 25vh;
+}
+
+.main-image {
+    max-height: 100%;
+    width: auto;
 }
 
 .mcgill-title h1 {
@@ -51,7 +93,7 @@ $text: calc(1.375rem + 1.5vw);
 }
   
 .roller{
-    height: calc($text + 0.125rem);
+    height: calc($text + 0.1rem);
     line-height: $text;
     position: relative;
     overflow: hidden; 
