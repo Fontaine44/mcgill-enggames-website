@@ -1,0 +1,98 @@
+.games {
+    height: calc(100vh - 75px);
+    background-color: rgb(216, 216, 216);
+}
+
+.games2 {
+    height: calc(100vh - 75px);
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+$text: calc(1.375rem + 1.5vw);
+  
+.img-wrapper, .mcgill-title {
+    background-color: black;
+}
+
+@media (min-width: 992px) {
+    .img-wrapper {
+        height: calc(75vh - 75px);
+    }
+}
+
+@media (max-width: 991px) {
+    .img-wrapper {
+        height: 100%;
+        padding-bottom: 2rem;
+    }
+}
+
+.main-image {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+
+.mcgill-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 25vh;
+}
+
+.mcgill-title h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white; 
+    font-weight: bold;
+    font-size: $text;
+}
+  
+.roller{
+    height: calc($text + 0.125rem);
+    line-height: $text;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ed1b2f;
+}
+  
+  
+.roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 7s infinite;  
+}
+
+#rolltext {  
+    animation: slide-mob 7s infinite;  
+}
+  
+@keyframes slide {
+    0% {
+      top: 0;
+    }
+    33% {
+      top: calc(-1 * $text);    
+    }
+    66% {
+      top: calc(-2 * $text);
+    }
+}
+    
+@keyframes slide-mob {
+    0% {
+        top: 0;
+    }
+    33% {
+        top: calc(-1 * $text / 2);    
+    }
+    66% {
+        top: calc(-1 * $text);
+    }
+}
