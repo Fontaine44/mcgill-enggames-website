@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SponsorsComponent } from './components/sponsors/sponsors.component';
+import { GamesComponent } from './components/games/games.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     HomeComponent,
     NavbarComponent,
     SponsorsComponent,
+    GamesComponent,
   ],
   imports: [
     CommonModule,
